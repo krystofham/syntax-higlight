@@ -1,0 +1,27 @@
+/* Reset raw page body */
+body {
+  margin: 0;
+  padding: 0;
+  background: #282c34; /* One Dark background */
+}
+
+/* Main code block */
+pre[class*="language-"] {
+  margin: 0;
+  padding: 1.5em 2em;
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-radius: 0;
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+  tab-size: 2;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+code[class*="language-"] {
+  font-family: inherit;
+  font-size: inherit;
+}
