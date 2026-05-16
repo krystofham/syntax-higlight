@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Raw Highlighter",
+  "version": "1.0.0",
+  "description": "Syntax highlighting for raw.githubusercontent.com and other raw code pages.",
+  "author": "your-name",
+
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://raw.githubusercontent.com/*",
+        "https://raw.github.com/*",
+        "https://gist.githubusercontent.com/*/raw/*"
+      ],
+      "js": ["prism.js", "content.js"],
+      "css": ["prism-one-dark.css", "content.css"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "raw-highlighter@your-name.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}
